@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#@title ÖN KURULUM
-
 echo "AIcrowd installer starting..."
 
 if ! nvidia-smi > /dev/null 2>&1; then
