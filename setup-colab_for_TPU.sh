@@ -24,14 +24,11 @@ pip install -U 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=Pyth
 echo "⚙️ Installing detectron..."
 pip install -q 'git+https://github.com/facebookresearch/detectron2.git' > /dev/null
 
-
 #Datasets (This gets downloaded in "/content/foodChallenge/data")
 echo "🗄 Preparing the dataset for training..."
-wget -q -nv https://datasets.aicrowd.com/default/aicrowd-public-datasets/food-recognition-challenge/v0.4/train-v0.4.tar.gz
-unzip -q -d dataset train-v0.4.tar.gz
+unzip -q -d dataset "/content/drive/MyDrive/Colab Notebooks/content/FoodRecognitionChallenge/train-v0.4.tar.gz"
 
 echo "🗄 Preparing the validation dataset..."
-wget -q -nv https://datasets.aicrowd.com/default/aicrowd-public-datasets/food-recognition-challenge/v0.4/val-v0.4.tar.gz
-unzip -q -d dataset val-v0.4.tar.gz
+unzip -q -d dataset "/content/drive/MyDrive/Colab Notebooks/content/FoodRecognitionChallenge/val-v0.4.tar.gz"
 
 echo "All set! 🎉🍻"
