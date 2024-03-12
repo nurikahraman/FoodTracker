@@ -14,10 +14,6 @@ fi
 
 echo "Setting up the environment for you!"
 
-echo "Google Drive deposu bağlanıyor..."
-from google.colab import drive
-drive.mount('/content/drive')
-
 echo "⚙️ Installing PyTorch..."
 pip install -U torch==2.1.0 torchvision==0.16.0 -f https://download.pytorch.org/whl/cu101/torch_stable.html > /dev/null
 
