@@ -7,7 +7,6 @@ echo
 #  echo "Gerekli düzeltme için: Runtime -> Change Runtime Type -> Hardware Accelerator -> GPU"
 #  exit 1
 #fi
-echo
 echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!    KONTROL ET    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 echo "Arka planda Python 3.10 kullanılıyor, alttaki torch ve yancısı torchvision python versiyonunu kontrol ettiği gibi" 
 echo "birbirlerininde veriyonunu kontrol ediyor. Belli bir eşleşme olması gerekiyor yüklenebilmeleri için."
