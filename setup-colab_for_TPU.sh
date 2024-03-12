@@ -24,11 +24,23 @@ pip install -U 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=Pyth
 echo "⚙️ Installing detectron..."
 pip install -q 'git+https://github.com/facebookresearch/detectron2.git' > /dev/null
 
-#Datasets (This gets downloaded in "/content/foodChallenge/data")
-echo "🗄 Preparing the dataset for training..."
-unzip -q "/content/drive/MyDrive/Colab Notebooks/content/FoodRecognitionChallenge/train-v0.4.zip" -d "/content/drive/MyDrive/Colab Notebooks/content/FoodRecognitionChallenge/dataset"
+#@title (TEST) Download and Extract Data from Google Drive
+#!df -BG
+!rm -R "/content/drive/MyDrive/Colab Notebooks/content/FoodRecognitionChallenge/dataset/"
+!rm train*.*
+!rm val*.*
+!pwd
+#!ls -lahSG
 
-echo "🗄 Preparing the validation dataset..."
-unzip -q "/content/drive/MyDrive/Colab Notebooks/content/FoodRecognitionChallenge/val-v0.4.tar.gz" -d "/content/drive/MyDrive/Colab Notebooks/content/FoodRecognitionChallenge/dataset"
+#from google.colab import drive
+#drive.mount('/content/drive')
+
+#Datasets (This gets downloaded in "/content/foodChallenge/data")
+!echo "🗄 Preparing the dataset for training..."
+!unzip -q "/content/drive/MyDrive/Colab Notebooks/content/FoodRecognitionChallenge/val-v0.4.tar.gz" -d "/content/drive/MyDrive/Colab Notebooks/content/FoodRecognitionChallenge/dataset/val"
+
+
+!echo "🗄 Preparing the validation dataset..."
+!unzip -q "/content/drive/MyDrive/Colab Notebooks/content/FoodRecognitionChallenge/train-v0.4.zip" -d "/content/drive/MyDrive/Colab Notebooks/content/FoodRecognitionChallenge/dataset/train"
 
 echo "All set! 🎉🍻"
