@@ -25,10 +25,10 @@ pip install -q 'git+https://github.com/facebookresearch/detectron2.git'# > /dev/
 
 #Datasets (This gets downloaded in "/content/foodChallenge/data")
 echo "🗄 Preparing the dataset for training..."
-unzip -q "/content/drive/MyDrive/Colab Notebooks/content/FoodRecognitionChallenge/val.zip" -d "/content/drive/MyDrive/Colab Notebooks/content/FoodRecognitionChallenge/dataset/"
+unzip -q "/content/drive/MyDrive/Colab Notebooks/content/FoodRecognitionChallenge/val.zip" -d "/content/dataset/"
 
 
 echo "🗄 Preparing the validation dataset..."
-unzip -q "/content/drive/MyDrive/Colab Notebooks/content/FoodRecognitionChallenge/train.zip" -d "/content/drive/MyDrive/Colab Notebooks/content/FoodRecognitionChallenge/dataset/"
+unzip -q "/content/drive/MyDrive/Colab Notebooks/content/FoodRecognitionChallenge/train.zip" -d "/content/dataset/"
 
 echo "All set! 🎉🍻"
