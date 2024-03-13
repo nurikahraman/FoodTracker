@@ -5,11 +5,29 @@ rm -R /content/dataset/
 echo
 echo "AIcrowd installer starting..."
 echo
+
+gpu_info = !nvidia-smi
+gpu_info = '\n'.join(gpu_info)
+if gpu_info.find('failed') >= 0:
+  print('Not connected to a GPU')
+else:
+  print(gpu_info)
+
 #if ! nvidia-smi > /dev/null 2>&1; then
 #  echo "🚫 BU AKIŞIN ÇALIŞMASI İÇİN BIR GRAFİK KARTI ATANMIŞ OLMALI, ANCAK HİÇBİR GPU ALGILANMADI"
 #  echo "Gerekli düzeltme için: Runtime -> Change Runtime Type -> Hardware Accelerator -> GPU"
 #  exit 1
 #fi
+
+from psutil import virtual_memory
+ram_gb = virtual_memory().total / 1e9
+print('Your runtime has {:.1f} gigabytes of available RAM\n'.format(ram_gb))
+
+if ram_gb < 20:
+  print('Not using a high-RAM runtime')
+else:
+  print('You are using a high-RAM runtime!')
+  
 echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!    KONTROL ET    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 echo "Arka planda Python 3.10 kullanılıyor, alttaki torch ve yancısı torchvision python versiyonunu kontrol ettiği gibi" 
 echo "birbirlerininde veriyonunu kontrol ediyor. Belli bir eşleşme olması gerekiyor yüklenebilmeleri için."
