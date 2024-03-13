@@ -18,7 +18,7 @@ pip install -U torch==2.1.0 torchvision==0.16.0 -f https://download.pytorch.org/
 
 echo "⚙️ Installing COCO API..."
 pip install cython pyyaml==6.0.1 > /dev/null
-pip install -U pycocotools==2.0.2 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'
+pip install -U 'git+https://github.com/nurikahraman/FoodTracker.git#subdirectory=PythonAPI'
 
 echo "⚙️ Installing detectron..."
 pip install -q 'git+https://github.com/facebookresearch/detectron2.git'# > /dev/null
