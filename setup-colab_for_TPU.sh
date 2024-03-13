@@ -18,7 +18,7 @@ pip install -U torch==2.1.0 torchvision==0.16.0 -f https://download.pytorch.org/
 
 echo "⚙️ Installing COCO API..."
 pip install cython pyyaml==6.0.1 > /dev/null
-pip install -U 'git+https://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@github.com/nurikahraman/FoodTracker.git#subdirectory=PythonAPI'
+pip install -U 'git+https://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@github.com/nurikahraman/FoodTracker.git#subdirectory=PythonAPI' > /dev/null
 
 echo "⚙️ Installing detectron..."
 pip install -q 'git+https://github.com/facebookresearch/detectron2.git'# > /dev/null
