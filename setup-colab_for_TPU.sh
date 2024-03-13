@@ -1,4 +1,7 @@
 #!/bin/bash
+
+rm -R "/content/dataset/"
+
 echo
 echo "AIcrowd installer starting..."
 echo
