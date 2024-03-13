@@ -30,11 +30,10 @@ mkdir -p '/content/dataset/val'
 mkdir -p '/content/dataset/train'
 
 #Datasets (This gets downloaded in "/content/foodChallenge/data")
-echo "🗄 Preparing the dataset for training..."
+echo "🗄 Preparing the validation dataset..."
 unzip -q "/content/drive/MyDrive/Colab Notebooks/content/FoodRecognitionChallenge/val.zip" -d "/content/dataset/val"
 
-
-echo "🗄 Preparing the validation dataset..."
+echo "🗄 Preparing the dataset for training..."
 unzip -q "/content/drive/MyDrive/Colab Notebooks/content/FoodRecognitionChallenge/train.zip" -d "/content/dataset/train"
 
 echo "All set! 🎉🍻"
