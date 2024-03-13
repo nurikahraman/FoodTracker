@@ -23,6 +23,9 @@ pip install -U 'git+https://github_pat_11ADYXSLQ0iyRLGLWs9lww_x9dSpqyTXpJ0iAI0Ct
 echo "⚙️ Installing detectron..."
 pip install -q 'git+https://github.com/facebookresearch/detectron2.git'# > /dev/null
 
+mkdir -p '/content/dataset/val'
+mkdir -p '/content/dataset/train'
+
 #Datasets (This gets downloaded in "/content/foodChallenge/data")
 echo "🗄 Preparing the dataset for training..."
 unzip -q "/content/drive/MyDrive/Colab Notebooks/content/FoodRecognitionChallenge/val.zip" -d "/content/dataset/val"
